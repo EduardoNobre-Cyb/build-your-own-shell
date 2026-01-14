@@ -7,8 +7,8 @@
 mingw32-make.exe clean
 wsl bash -c "cd /mnt/c/dev/src/dudu/build-your-own-shell && make clean"
 
-# Build refactored version
-wsl bash -c "cd /mnt/c/dev/src/dudu/build-your-own-shell && make refactored"
+# Build project
+wsl bash -c "cd /mnt/c/dev/src/dudu/build-your-own-shell && make all"
 
 # Build both versions
 wsl bash -c "cd /mnt/c/dev/src/dudu/build-your-own-shell && make all"
