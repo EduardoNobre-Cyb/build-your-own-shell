@@ -52,8 +52,7 @@ build-your-own-shell/
 ├── Makefile                    # Build automation
 ├── CLI_LIBRARIES.md            # CLI parsing libraries documentation
 ├── REFACTORING_SUMMARY.md      # This file
-├── shell.cpp                   # Original monolithic implementation
-├── shell_refactored.cpp        # New refactored main file (~160 lines)
+├── shell.cpp                   # Refactored main file (~160 lines)
 │
 ├── include/                    # Header files
 │   ├── path_utils.h           # PATH handling utilities
