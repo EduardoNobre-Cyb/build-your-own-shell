@@ -92,7 +92,7 @@ char *directory_generator(const char *text, int state)
             const char *home = getenv("HOME");
             if (prefix[0] == '~' && home && search_dir.find(home) == 0)
             {
-              if (home && full_path.substr(0, strlen(home)) == home)
+              if (full_path.substr(0, strlen(home)) == home)
               {
                 completion = "~" + full_path.substr(strlen(home));
               }
