@@ -101,7 +101,7 @@ cd build-your-own-shell
 python3 shell.py
 ```
 
-### Running the C+Makefile (Recommended)**
+### Running the C++ Shell (Makefile, Recommended)
 
 ```bash
 # Build the shell
