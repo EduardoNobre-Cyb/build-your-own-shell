@@ -94,7 +94,7 @@ char *directory_generator(const char *text, int state)
               const char *home = getenv("HOME");
               if (home && full_path.substr(0, strlen(home)) == home)
               {
-                completion = "~" + full_path.substr(strlen(home)) + "/" + name;
+                completion = "~" + full_path.substr(strlen(home));
               }
               else
               {
