@@ -18,12 +18,11 @@ A comprehensive Makefile has been added to automate the build process.
 
 **Usage:**
 ```bash
-make                # Build both versions
-make refactored     # Build only refactored version
-make original       # Build only original version
-make run-refactored # Build and run refactored version
-make clean          # Remove build artifacts
-make help           # Show all available targets
+make        # Build all targets (default)
+make all    # Explicitly build all targets
+make run    # Build and run the main shell
+make clean  # Remove build artifacts
+make help   # Show all available targets
 ```
 
 ### 2. ✅ Command Line Parsing Libraries Documentation
