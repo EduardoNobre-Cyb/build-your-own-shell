@@ -158,7 +158,7 @@ $ ./bin/shell --no-history
 $ ./bin/shell --history-file ~/.my_shell_history
 ```
 
-### 
+### Dependencies
 - **Ubuntu/Debian:** `sudo apt-get install build-essential libreadline-dev`
 - **Fedora/RHEL:** `sudo dnf install gcc-c++ make readline-devel`
 - **macOS:** `xcode-select --install && 
