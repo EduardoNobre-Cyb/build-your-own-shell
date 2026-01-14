@@ -28,7 +28,7 @@ BIN_DIR := bin
 
 # Target executables
 TARGET := $(BIN_DIR)/shell
-TARGET_ORIGINAL := $(BIN_DIR)/shell_original
+# TARGET_ORIGINAL := $(BIN_DIR)/shell_original  # Commented out - shell_original.cpp does not exist
 
 # Source files for main version (refactored with CLI11)
 SOURCES := shell.cpp \
@@ -40,20 +40,20 @@ SOURCES := shell.cpp \
 OBJECTS := $(SOURCES:%.cpp=$(BUILD_DIR)/%.o)
 
 # Source files for original monolithic version
-SOURCES_ORIGINAL := shell_original.cpp
-OBJECTS_ORIGINAL := $(SOURCES_ORIGINAL:%.cpp=$(BUILD_DIR)/%.o)
+# SOURCES_ORIGINAL := shell_original.cpp  # Commented out - shell_original.cpp does not exist
+# OBJECTS_ORIGINAL := $(SOURCES_ORIGINAL:%.cpp=$(BUILD_DIR)/%.o)
 
 # Default target - build main version
 .PHONY: all
 all: $(TARGET)
 
-# Build both versions
-.PHONY: both
-both: $(TARGET) $(TARGET_ORIGINAL)
+# Build both versions (original target commented out - shell_original.cpp does not exist)
+# .PHONY: both
+# both: $(TARGET) $(TARGET_ORIGINAL)
 
-# Build only original monolithic version
-.PHONY: original
-original: $(TARGET_ORIGINAL)
+# Build only original monolithic version (commented out - shell_original.cpp does not exist)
+# .PHONY: original
+# original: $(TARGET_ORIGINAL)
 
 # Create necessary directories
 $(BUILD_DIR):
@@ -70,10 +70,10 @@ $(TARGET): $(OBJECTS) | $(BIN_DIR)
 	$(CXX) $(OBJECTS) -o $@ $(LDFLAGS)
 	@echo Build complete: $(TARGET)
 
-# Link object files to create original monolithic executable
-$(TARGET_ORIGINAL): $(OBJECTS_ORIGINAL) | $(BIN_DIR)
-	$(CXX) $(OBJECTS_ORIGINAL) -o $@ $(LDFLAGS)
-	@echo Build complete: $(TARGET_ORIGINAL)
+# Link object files to create original monolithic executable (commented out - shell_original.cpp does not exist)
+# $(TARGET_ORIGINAL): $(OBJECTS_ORIGINAL) | $(BIN_DIR)
+# 	$(CXX) $(OBJECTS_ORIGINAL) -o $@ $(LDFLAGS)
+# 	@echo Build complete: $(TARGET_ORIGINAL)
 
 # Compile source files to object files (from root directory)
 $(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
@@ -99,20 +99,17 @@ rebuild: clean all
 run: $(TARGET)
 	./$(TARGET)
 
-# Run the original monolithic shell
-.PHONY: run-original
-run-original: $(TARGET_ORIGINAL)
-	./$(TARGET_ORIGINAL)
+# Run the original monolithic shell (commented out - shell_original.cpp does not exist)
+# .PHONY: run-original
+# run-original: $(TARGET_ORIGINAL)
+# 	./$(TARGET_ORIGINAL)
 
 # Print help
 .PHONY: help
 help:
 	@echo "Available targets:"
 	@echo "  all          - Build main shell version (default)"
-	@echo "  both         - Build both main and original versions"
-	@echo "  original     - Build only the original monolithic version"
 	@echo "  clean        - Remove build artifacts"
 	@echo "  rebuild      - Clean and rebuild"
 	@echo "  run          - Build and run the main shell"
-	@echo "  run-original - Build and run the original monolithic shell"
 	@echo "  help         - Show this help message"

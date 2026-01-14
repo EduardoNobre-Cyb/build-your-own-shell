@@ -89,10 +89,10 @@ char *directory_generator(const char *text, int state)
           {
             // Build the completion string
             std::string completion;
-            if (prefix[0] == '~' && search_dir.find(getenv("HOME") ? getenv("HOME") : "") == 0)
+            const char *home = getenv("HOME");
+            if (prefix[0] == '~' && home && search_dir.find(home) == 0)
             {
-              const char *home = getenv("HOME");
-              if (home && full_path.substr(0, strlen(home)) == home)
+              if (full_path.substr(0, strlen(home)) == home)
               {
                 completion = "~" + full_path.substr(strlen(home));
               }

@@ -21,22 +21,22 @@ wsl bash -c "cd /mnt/c/dev/src/dudu/build-your-own-shell && make help"
 
 ```bash
 # Show help
-wsl bash -c "cd /mnt/c/dev/src/dudu/build-your-own-shell && ./bin/shell_refactored --help"
+wsl bash -c "cd /mnt/c/dev/src/dudu/build-your-own-shell && ./bin/shell --help"
 
 # Show version
-wsl bash -c "cd /mnt/c/dev/src/dudu/build-your-own-shell && ./bin/shell_refactored --version"
+wsl bash -c "cd /mnt/c/dev/src/dudu/build-your-own-shell && ./bin/shell --version"
 
 # Run normally
-wsl bash -c "cd /mnt/c/dev/src/dudu/build-your-own-shell && ./bin/shell_refactored"
+wsl bash -c "cd /mnt/c/dev/src/dudu/build-your-own-shell && ./bin/shell"
 
 # Run with verbose mode
-wsl bash -c "cd /mnt/c/dev/src/dudu/build-your-own-shell && ./bin/shell_refactored -v"
+wsl bash -c "cd /mnt/c/dev/src/dudu/build-your-own-shell && ./bin/shell -v"
 
 # Run without history
-wsl bash -c "cd /mnt/c/dev/src/dudu/build-your-own-shell && ./bin/shell_refactored --no-history"
+wsl bash -c "cd /mnt/c/dev/src/dudu/build-your-own-shell && ./bin/shell --no-history"
 
 # Run with custom history file
-wsl bash -c "cd /mnt/c/dev/src/dudu/build-your-own-shell && ./bin/shell_refactored -H ~/.my_history"
+wsl bash -c "cd /mnt/c/dev/src/dudu/build-your-own-shell && ./bin/shell -H ~/.my_history"
 ```
 
 ## Available Options
@@ -55,7 +55,7 @@ wsl bash -c "cd /mnt/c/dev/src/dudu/build-your-own-shell && ./bin/shell_refactor
 ```
 build-your-own-shell/
 ├── Makefile                 # Build system
-├── shell_refactored.cpp     # Main file with CLI11
+├── shell.cpp                # Main file with CLI11
 ├── third_party/CLI11.hpp    # CLI11 library
 ├── include/                 # Headers (5 files)
 ├── src/                     # Implementation (5 files)
@@ -65,7 +65,7 @@ build-your-own-shell/
 
 ## Key Files
 
-- **Main**: `shell_refactored.cpp`
+- **Main**: `shell.cpp`
 - **CLI Library**: `third_party/CLI11.hpp`
 - **Build**: `Makefile`
 - **Docs**: 
