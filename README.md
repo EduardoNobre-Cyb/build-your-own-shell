@@ -242,9 +242,7 @@ Additional documentation is available in the [docs/](docs/) folder:
 - **Cross-Platform**: Works on Linux, macOS, and Windows (via WSL)
 
 **Modules:**
-- **path_utils**: Executable lookup and PATH resolu
-
-**C++ Version**: Modular architecture with CLI11 integration 🚀tion
+- **path_utils**: Executable lookup and PATH resolution
 - **command_parser**: Parse commands, handle quotes, redirections, and pipes
 - **command_executor**: Execute commands with process management
 - **builtins**: Implement shell builtin commands
