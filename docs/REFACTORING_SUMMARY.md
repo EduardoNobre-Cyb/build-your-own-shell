@@ -49,8 +49,9 @@ The original 1222-line `shell.cpp` has been split into logical components:
 ```
 build-your-own-shell/
 ├── Makefile                    # Build automation
-├── CLI_LIBRARIES.md            # CLI parsing libraries documentation
-├── REFACTORING_SUMMARY.md      # This file
+├── docs/                       # Documentation
+│   ├── CLI_LIBRARIES.md        # CLI parsing libraries documentation
+│   └── REFACTORING_SUMMARY.md  # This file
 ├── shell.cpp                   # Refactored main file (~160 lines)
 │
 ├── include/                    # Header files
